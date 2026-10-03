@@ -1,4 +1,33 @@
+#Imports
+from datetime import date
+import os
 #Functions
+def ascii(num):
+  if num == 1:
+    ticket = fr"""┏===========================================================================┓
+|                                *                                           |
+|                                **                                          |
+|                                 **          |==   |     |   |     |        |
+|  |        |        |            ***        |      |     |   |     |        |
+|  |       |        | |    ************+\   |       |     |   |     |        |
+|  |      | ---|   |---|   ************+/  |        |=====|   |=====|        |
+|  |____   |___|  |     |         ***       |       |     |   |     |        |
+|                                 **         |      |     |   |     |        |
+|                                **           |==   |     |   |     |        |
+|                                *                                           |
+|                                                                            |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -       |
+|                                                                            |
+|                                 __  __    _     ____   _____  _     __  __ |
+|    Passenger:{user_name.ljust(17)}                                             |
+|    Date:{date.today().strftime("%m/%d/%Y")}                |  \/  |  /_\   / ___| |  ___|| |    \ \/ /|
+|    Airline: MagFly Airlines     | |\/| | / _ \ | |  _  | |_   | |     \  / |
+|                                 | |  | |/ ___ \| |_| | |  _|  | |___  / /  |
+|                                 |_|  |_/_/   \_\\____| |_|    |_____|/_/   |
+|                                                                            |
+┗===========================================================================┛
+"""
+    print(ticket)
 def p(*x):
   print(str(x))
 def clear_screen():
@@ -25,7 +54,7 @@ def run_game():
     print("Ok, and always remember, follow the Magic!")
   elif tut_choice == "N":
     pass
-  print("You wake up, early in the morning. The birds are singing, and you think it's just a normal day.")\
+  print("You wake up, early in the morning. The birds are singing, and you think it's just a normal day.")
   print("You go out to check the mail.")
   print("You find one unnamed envelope, which is probably just a bunch of bills.")
   print("You walk inside and close the door.")
@@ -39,5 +68,7 @@ def run_game():
     print("It's in the hall.")
     print("You walk to the hall.")
   print("Opening...")
+  clear_screen()
+  ascii(1)
   
 run_game()
